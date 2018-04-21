@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Chivo');
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+body
+{
+    background-color: #222;
+    font-family: 'Chivo',sans-serif;
+    color:white;
+}
+
+/*  --------------- Blocos */
+#conteiner
+{
+  background-color:  rgba(26, 234, 113, 0.97);
+}
+
+#header-block
+{
+  background-image: url("cube.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2%;
+  box-shadow: -20px -20px white;
+}
+
+#header__title
+{
+  font-family: 'Rubik',sans-serif;
+  color:rgba(26, 234, 113, 0.97);
+  text-transform: uppercase;
+}
+
+#header__subtitle
+{
+  font-family: 'Rubik',sans-serif;
+  color:white;
+}
+
+.content-box
+{
+  background: #222;
+  color:white;
+  box-shadow: -20px -20px white;
+}
+
+figure
+{
+  background-color: #222;
+}
+
+/* --------------- Textos */
+.title
+{
+  font-family: 'Rubik',sans-serif;
+  text-transform: uppercase;
+  color: white;
+}
+
+.subtitle
+{
+  font-family: 'Chivo',sans-serif;
+  color:rgba(26, 234, 113, 0.97);
+}
+
+a
+{
+  color: rgba(26, 234, 113, 0.97);
+  text-align: justify;
+}
+
+a:hover
+{
+  text-decoration: underline;
+  color:white;
+  text-align: justify;
+}
+
+em
+{
+  color:rgba(26, 234, 113, 0.97);
+  text-align: justify;
+}
+
+/* --------------- Elementos */
+#photo
+{
+  border: solid 0.5em #222;
+}
