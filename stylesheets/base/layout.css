@@ -1,25 +1,54 @@
 /* ------------------------------------ Configurações gerais */
-#conteiner {
-  padding: 1em;
-  margin: 12em auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 #header-block
 {
   height: auto;
-  margin-top: 80px;
+  margin-top: 100px;
+  grid-area:header;
 }
 
 #navigation-block
 {
   line-height: 4em;
+  grid-area:nav;
+}
+
+#about-box
+{
+  grid-area:about;
+}
+
+#objective-box
+{
+  grid-area:objective;
+}
+
+#skills-box
+{
+  grid-area:skills;
+}
+
+#projects-box
+{
+  grid-area:projects;
+}
+
+#contact-box
+{
+  grid-area:contact;
+}
+
+#credits-box
+{
+  grid-area:credits;
+}
+
+#photo
+{
+  width: 50%;
+  height: 60%;
+  border-radius: 50%;
+  top:-50px;
+  margin: 0 auto;
 }
 
 figure
@@ -41,30 +70,33 @@ figcaption p
 
 .content-box
 {
-  margin: 0 auto 250px auto;
-  padding: 2em;
   width: 90%;
-  min-height: 200px;
   height: auto;
+  margin: 2em 2em;
+  padding: 1em;
   text-align: center;
-  -webkit-box-flex:1;
-  -ms-flex:1 1 auto;
-  flex:1 1 auto;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   border-radius: 2em;
 }
 
 /* ------------------------------------- Tela Grande */
 @media only screen and (min-width: 700px)
 {
-  #photo
-  {
-    width: 420px;
-    height: 420px;
-    border-radius: 50%;
-    top:-250px;
-    margin: 0 auto;
+  #conteiner {
+    padding: 2em;
+    width: auto;
+    max-width: 1330px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto auto auto auto auto;
+    grid-gap:10px 0px;
+    grid-template-areas:
+    " header header header header header "
+    " nav nav nav nav nav "
+    " about about about about about "
+    " skills skills objective objective objective "
+    " projects projects projects contact contact "
+    " credits credits credits credits credits ";
   }
 
   #upToNavLink
@@ -95,12 +127,12 @@ figcaption p
 
   .title
   {
-    font-size: 3em;
+    font-size: 2em;
   }
 
   .subtitle
   {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   .simple-text
@@ -112,13 +144,22 @@ figcaption p
 /* ------------------------------------------- Tela média */
 @media only screen and (max-width:700px)
 {
-  #photo
-  {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    top:-200px;
-    margin: 0 auto;
+  #conteiner {
+    padding: 1em;
+    width: auto;
+    max-width: 700px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 20% 20% 60% ;
+    grid-template-rows: auto auto auto auto auto;
+    grid-gap:10px 5px;
+    grid-template-areas:
+    " header header header "
+    " nav nav nav "
+    " about about about "
+    " skills skills objective "
+    " projects projects contact "
+    " credits credits credits ";
   }
 
   #upToNavLink
@@ -149,12 +190,12 @@ figcaption p
 
   .title
   {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   .subtitle
   {
-    font-size: 1.5em;
+    font-size: 1em;
   }
 
   .simple-text
@@ -166,13 +207,24 @@ figcaption p
 /* ------------------------------------ Tela pequena */
 @media only screen and (max-width:480px)
 {
-  #photo
-  {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    top:-10px;
-    margin: 0 auto;
+  #conteiner {
+    padding: 1em;
+    width: auto;
+    max-width: 480px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto;
+    grid-gap:10px 1px;
+    grid-template-areas:
+    " header "
+    " nav "
+    " about "
+    " objective "
+    " skills "
+    " projects "
+    " contact "
+    " credits ";
   }
 
   #upToNavLink
